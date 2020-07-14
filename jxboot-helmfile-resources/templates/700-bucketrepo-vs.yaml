@@ -13,6 +13,36 @@ spec:
       name: http
       number: 80
       protocol: HTTP
+{{- if .Values.jxRequirements.ingress.tls.enabled }}       
+  - hosts:
+    - bucketrepo{{ .Values.jxRequirements.ingress.namespaceSubDomain }}{{ .Values.jxRequirements.ingress.domain }}
+    port:
+      name: bucket:0
+      number: 443
+      protocol: HTTPS
+    tls:
+{{- if .Values.bucketrepo.ingress.tls.secretName }}
+      credentialName: "{{ .Values.bucketrepo.ingress.tls.secretName }}"
+      mode: SIMPLE
+      privateKey: tls.key
+      serverCertificate: tls.crt
+{{- else if .Values.jxRequirements.ingress.tls.secretName }}
+      credentialName: "{{ .Values.jxRequirements.ingress.tls.secretName }}"
+      mode: SIMPLE
+      privateKey: tls.key
+      serverCertificate: tls.crt
+{{- else if .Values.jxRequirements.ingress.tls.production }}
+      credentialName: "tls-{{ .Values.jxRequirements.ingress.domain | replace "." "-" }}-p"
+      mode: SIMPLE
+      privateKey: tls.key
+      serverCertificate: tls.crt
+{{- else }}
+      credentialName: "tls-{{ .Values.jxRequirements.ingress.domain | replace "." "-" }}-s"
+      mode: SIMPLE
+      privateKey: tls.key
+      serverCertificate: tls.crt
+{{- end }}
+{{- end }}            
 ---
 
 apiVersion: networking.istio.io/v1beta1
@@ -21,7 +51,7 @@ metadata:
   name: bucketrepo
 spec:
   gateways:
-  - bucketrepo
+  - jx/bucketrepo
   hosts:
     - bucketrepo{{ .Values.jxRequirements.ingress.namespaceSubDomain }}{{ .Values.jxRequirements.ingress.domain }}
   http:
