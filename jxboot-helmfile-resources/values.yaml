@@ -1,11 +1,11 @@
 buildPacks:
   "classic-workloads":
-    label: "Library Workloads: CI+Release but no CD"
-    gitUrl: "https://github.com/jenkins-x-buildpacks/jenkins-x-classic.git"
+    label: "Library Workloads: CI+Release but no CD- Rajat"
+    gitUrl: "https://github.com/rajattyagipvr/jenkins-x-classic.git"
     gitRef: "master"
   "kubernetes-workloads":
-    label: "Kubernetes Workloads: Automated CI+CD with GitOps Promotion"
-    gitUrl: "https://github.com/jenkins-x-labs/jenkins-x-kubernetes.git"
+    label: "Kubernetes Workloads: Automated CI+CD with GitOps Promotion- Rajat"
+    gitUrl: "https://github.com/rajattyagipvr/jenkins-x-kubernetes.git"
     gitRef: "master"
 
 chartmuseumServiceLink:
@@ -1569,8 +1569,8 @@ jxRequirements:
   autoUpdate:
     enabled: false
     schedule: ""
-  bootConfigURL: https://github.com/jenkins-x/jxr-boot-config.git
-  buildPackURL: https://github.com/jenkins-x/jxr-packs-kubernetes.git
+  bootConfigURL: https://github.com/jenkinns-x/jxr-boot-config.git
+  buildPackURL: https://github.com/rajattyagipvr/jenkins-x-kubernetes.git
   buildPackRef: master
   cluster:
     clustername: mycluster
