@@ -1569,7 +1569,7 @@ jxRequirements:
   autoUpdate:
     enabled: false
     schedule: ""
-  bootConfigURL: https://github.com/jenkinns-x/jxr-boot-config.git
+  bootConfigURL: https://github.com/rajattyagipvr/jenkins-x-boot-helmfile-config.git
   buildPackURL: https://github.com/rajattyagipvr/jenkins-x-kubernetes.git
   buildPackRef: master
   cluster:
