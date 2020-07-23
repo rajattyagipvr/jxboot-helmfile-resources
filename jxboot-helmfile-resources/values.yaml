@@ -5,7 +5,7 @@ buildPacks:
     gitRef: "master"
   "kubernetes-workloads":
     label: "Kubernetes Workloads: Automated CI+CD with GitOps Promotion- Rajat"
-    gitUrl: "https://github.com/rajattyagipvr/jenkins-x-kubernetes.git"
+    gitUrl: "https://github.com/rajattyagipvr/jxr-packs-kubernetes.git"
     gitRef: "master"
 
 chartmuseumServiceLink:
@@ -1570,7 +1570,7 @@ jxRequirements:
     enabled: false
     schedule: ""
   bootConfigURL: https://github.com/rajattyagipvr/jenkins-x-boot-helmfile-config.git
-  buildPackURL: https://github.com/rajattyagipvr/jenkins-x-kubernetes.git
+  buildPackURL: https://github.com/rajattyagipvr/jxr-packs-kubernetes.git
   buildPackRef: master
   cluster:
     clustername: mycluster
