@@ -31,7 +31,7 @@ spec:
             env:
             - name: HOME
               value: /home
-            image: gcr.io/jenkinsxio-labs-private/jxl:{{ .Values.versions.jxl }}
+            image: 702769831180.dkr.ecr.ap-south-1.amazonaws.com/702769831180/jxl:{{ .Values.versions.jxl }}
             imagePullPolicy: Always
             name: jenkins-x-upgrade-processor
             resources: {}
