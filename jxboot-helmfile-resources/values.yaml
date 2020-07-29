@@ -790,7 +790,7 @@ podTemplates:
       #   value: jenkins-x-builder
       containers:
         Go:
-          image: rawlingsj80/builder-go:wip2
+          image: 702769831180.dkr.ecr.ap-south-1.amazonaws.com/702769831180/builder-terraform:2.1.113-5
           privileged: true
           requestCpu: "400m"
           requestMemory: "600Mi"
@@ -823,7 +823,7 @@ podTemplates:
       #   value: jenkins-x-builder
       containers:
         Terraform:
-          image: 702769831180.dkr.ecr.ap-south-1.amazonaws.com/702769831180/builder-terraform:2.1.113-5
+          image: 
           privileged: true
           requestCpu: "400m"
           requestMemory: "600Mi"
