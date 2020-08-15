@@ -11,3 +11,9 @@ dependencies:
   url: https://github.com/rajattyagipvr/jenkins-x-builders-ml
   version: 0.1.1297
   versionURL: ""
+- host: github.com
+  owner: rajattyagipvr
+  repo: spring-http-gradle
+  url: https://github.com/rajattyagipvr/spring-http-gradle
+  version: 2.1.113-8
+  versionURL: ""
