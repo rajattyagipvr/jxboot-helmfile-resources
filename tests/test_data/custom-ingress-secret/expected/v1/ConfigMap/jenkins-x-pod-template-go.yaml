@@ -23,7 +23,7 @@ data:
         emptyDir: {}
       containers:
       - name: go
-        image: rawlingsj80/builder-go:wip2
+        image: gcr.io/jenkinsxio/builder-go:2.1.150-770
         args:
         - cat
         command:

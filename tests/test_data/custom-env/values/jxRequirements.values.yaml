@@ -13,8 +13,6 @@ secrets:
     password: "secretchartmuseumpwd"
     username: "myuser"
   pipelineUser:
-    username: "myuser"
-    email: "myuser@bar.com"
     token: "myusertoken"
 
 jxRequirements:
@@ -41,8 +39,10 @@ jxRequirements:
     repository: environment-mycluster-dev
   - key: custom
     repository: environment-mycluster-custom
+    promotionStrategy: Manual
   - key: another
     repository: environment-mycluster-another
+    promotionStrategy: Auto
   - key: production
     repository: environment-mycluster-production
   gitops: true
@@ -54,6 +54,9 @@ jxRequirements:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: "myuser"
+    email: "myuser@bar.com"
   repository: nexus
   secretStorage: local
   storage:
